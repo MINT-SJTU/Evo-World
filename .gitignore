@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Environments
+.env
+.venv/
+venv/
+env/
+
+# Checkpoints, caches, precomputed flow, logs
+ckpt/
+checkpoints/
+cache/
+*.ckpt
+*.pt
+*.pth
+*.safetensors
+wandb/
+swanlog/
+runs/
+logs/
+*.log
+
+# Precomputed / visualization outputs
+flow_vis/
+flow_vis_smoke/
+framediff_vis/
+outputs/
+
+# Data (keep configs, not the datasets themselves)
+data/
+datasets/
+*.mp4
+*.parquet
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp

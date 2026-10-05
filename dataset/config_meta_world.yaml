@@ -1,0 +1,18 @@
+# do not change max_action_dim, max_state_dim, max_views
+max_action_dim: 24
+max_state_dim: 24
+max_views: 3
+normalization_type: bounds # options: bounds, normal, bounds_q99
+datasets_manifest: LA2VLA_c1ext_metaworld_v1.pkl
+
+decoder_cache_size: 16             # video decoder cache size
+cache_shard_size_bytes: 268435456  # shard size for caching decoded videos, default 256MB
+
+data_groups:
+  metaworld_robot:
+    metaworld_Mint:
+      path: /path/to/datasets/MINT-SJTU_Evo1_MetaWorld/
+      view_map:
+        image_1: observation.images.image
+      use_delta_action: False
+      process_suite: metaworld

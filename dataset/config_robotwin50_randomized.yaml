@@ -1,0 +1,465 @@
+# Multi-task RoboTwin (Randomized/Clean) training config (50 tasks)
+# Paths point to /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean
+# Each task = one dataset_key under the single ALOHA arm group.
+
+max_action_dim: 24
+max_state_dim: 24
+max_views: 3
+normalization_type: bounds
+datasets_manifest: robotwin50_randomized_multitask.pkl
+
+decoder_cache_size: 16
+cache_shard_size_bytes: 268435456
+
+data_groups:
+  aloha_joint:
+    robotwin_adjust_bottle:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/adjust_bottle
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_beat_block_hammer:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/beat_block_hammer
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_blocks_ranking_rgb:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/blocks_ranking_rgb
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_blocks_ranking_size:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/blocks_ranking_size
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_click_alarmclock:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/click_alarmclock
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_click_bell:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/click_bell
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_dump_bin_bigbin:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/dump_bin_bigbin
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_grab_roller:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/grab_roller
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_handover_block:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/handover_block
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_handover_mic:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/handover_mic
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_hanging_mug:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/hanging_mug
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_lift_pot:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/lift_pot
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_move_can_pot:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/move_can_pot
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_move_pillbottle_pad:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/move_pillbottle_pad
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_move_playingcard_away:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/move_playingcard_away
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_move_stapler_pad:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/move_stapler_pad
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_open_laptop:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/open_laptop
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_open_microwave:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/open_microwave
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_pick_diverse_bottles:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/pick_diverse_bottles
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_pick_dual_bottles:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/pick_dual_bottles
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_place_a2b_left:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/place_a2b_left
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_place_a2b_right:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/place_a2b_right
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_place_bread_basket:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/place_bread_basket
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_place_bread_skillet:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/place_bread_skillet
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_place_burger_fries:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/place_burger_fries
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_place_can_basket:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/place_can_basket
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_place_cans_plasticbox:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/place_cans_plasticbox
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_place_container_plate:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/place_container_plate
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_place_dual_shoes:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/place_dual_shoes
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_place_empty_cup:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/place_empty_cup
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_place_fan:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/place_fan
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_place_mouse_pad:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/place_mouse_pad
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_place_object_basket:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/place_object_basket
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_place_object_scale:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/place_object_scale
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_place_object_stand:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/place_object_stand
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_place_phone_stand:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/place_phone_stand
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_place_shoe:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/place_shoe
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_press_stapler:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/press_stapler
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_put_bottles_dustbin:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/put_bottles_dustbin
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_put_object_cabinet:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/put_object_cabinet
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_rotate_qrcode:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/rotate_qrcode
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_scan_object:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/scan_object
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_shake_bottle:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/shake_bottle
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_shake_bottle_horizontally:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/shake_bottle_horizontally
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_stack_blocks_three:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/stack_blocks_three
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_stack_blocks_two:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/stack_blocks_two
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_stack_bowls_three:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/stack_bowls_three
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_stack_bowls_two:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/stack_bowls_two
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_stamp_seal:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/stamp_seal
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
+    robotwin_turn_switch:
+      path: /path/to/datasets/StarVLA_RoboTwin-Randomized/Clean/turn_switch
+      view_map:
+        image_1: observation.images.cam_high
+        image_2: observation.images.cam_left_wrist
+        image_3: observation.images.cam_right_wrist
+      use_delta_action: False
+      process_suite: aloha_joint_angle
+
