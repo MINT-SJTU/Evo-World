@@ -12,7 +12,7 @@ changing the action interface — and at inference no future frame or optical-fl
 estimator is required.
 
 <p align="center">
-  <img src="./model.png" width="100%">
+  <img src="./model.png" width="90%">
 </p>
 
 
