@@ -55,9 +55,7 @@ huggingface-cli download MINT-SJTU/Evo-World-Metaworld --local-dir $EVO_ROOT/ckp
 huggingface-cli download MINT-SJTU/Evo-World-Robotwin  --local-dir $EVO_ROOT/ckpt/evo_world_robotwin
 ```
 
-Each HuggingFace repo is **flat** — the files sit at the repo root (no `step_XXXXX/`
-subdirectory), so after download `CKPT_DIR` points directly at the folder above:
-
+After downloading, set CKPT_DIR to the downloaded checkpoint directory.
 ```
 $EVO_ROOT/ckpt/evo_world_metaworld/
   config.json                  # EvoConfig (use_world_model=true)
