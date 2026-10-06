@@ -2,14 +2,10 @@
 
 **Evo-World** is a lightweight vision-language-action (VLA) model that augments policy
 learning with **future motion prediction**. Alongside predicting robot actions, a
-compact predictive branch (the *optical world model*) anticipates future motion in
-a latent space, supervised by optical flow between the current frame and a
-frame 15 steps ahead. Because optical flow captures image-space displacement while
+compact predictive branch anticipates future motion in
+a latent space, supervised by optical flow between the current and future frame. As optical flow captures image-space displacement while
 suppressing static appearance, this provides a task-relevant predictive signal
-focused on motion rather than appearance. The predicted motion representation is
-fed back into the policy via FiLM conditioning, improving manipulation without
-changing the action interface — and at inference no future frame or optical-flow
-estimator is required.
+focused on motion rather than appearance. 
 
 <p align="center">
   <img src="./model.png" width="90%">
