@@ -1,5 +1,14 @@
 <h1 align="center"> Evo-World </h1>
 
+<p align="center">
+  <a href="https://mint-sjtu.github.io/Evo-World.io/">
+    <img src="https://img.shields.io/badge/Website-Visit%20Project-blue?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Project Website">
+  </a>
+  <a href="https://arxiv.org/pdf/2610.12936">
+    <img src="https://img.shields.io/badge/Paper-Read%20Paper-red?style=for-the-badge&logo=arxiv&logoColor=white" alt="Paper">
+  </a>
+</p>
+
 **Evo-World** is a lightweight vision-language-action (VLA) model that augments policy
 learning with **future motion prediction**. Alongside predicting robot actions, a
 compact predictive branch anticipates future motion in
